@@ -11,12 +11,10 @@ namespace Lib;
  * Class Enter
  */
 class Enter{
-    private $_userId;
     private $_usedStrategy;
 
     public function __construct($strategy)
     {
-        $this->_userId = User::$userId;
         $this->_usedStrategy = $strategy;
     }
 

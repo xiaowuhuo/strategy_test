@@ -10,6 +10,6 @@ require_once 'Lib/Loader.php';
 spl_autoload_register('Loader::autoload');
 
 echo '<pre>';
-$e = new \Lib\Enter('strategy\v2');
-$e->run();
+$context = new \Lib\Context(new \strategy\v2());
+$context->run();
 echo '</pre>';
