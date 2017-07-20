@@ -8,20 +8,17 @@
  * http://www.runoob.com/design-pattern/strategy-pattern.html
  *
  */
+namespace Lib;
+
 class Context implements work {
     private $strategy;
 
     public function run()
     {
-        $flow = $this->strategy->getConf(get_class($this->strategy));
-        $current = $this->strategy->getCurrent();
-        $history = $this->strategy->getHistory();
-
-
-        return [];
+        $this->strategy->checkFlow();
     }
 
-    public function __construct(Strategy $strategy)
+    public function __construct(strategy $strategy)
     {
         $this->strategy = $strategy;
     }

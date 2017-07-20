@@ -5,7 +5,7 @@
  * Date: 2017/7/20
  * Time: 下午7:53
  */
-
+namespace Lib;
 interface strategy{
 
     /**
@@ -24,24 +24,10 @@ interface strategy{
     public function checkFlow();
 
     /**
-     * @method 获取当前节点；
-     *
-     * @return string
-     */
-    public function getCurrent();
-
-    /**
      * @method  获取历史；
      *
      * @return array
      */
     public function getHistory();
 
-    /**
-     * @method 历史匹配流程；
-     *
-     * @param $history
-     * @return mixed
-     */
-    public function matchFlow($history);
 }
