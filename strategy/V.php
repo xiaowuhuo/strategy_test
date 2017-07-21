@@ -38,6 +38,7 @@ class V implements strategy {
                 return;
             }
         }
+
     }
 
     public function getConf($name)

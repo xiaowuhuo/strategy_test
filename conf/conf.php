@@ -11,8 +11,8 @@ return [
         'strategy\v2'
     ],
     'flow_version' => [
-        'flow\A' => 'v1.0.0',
-        'flow\B' => 'v1.0.0',
+        'flow\A' => 'v1.0.1',
+        'flow\B' => 'v1.0.1',
         'flow\C' => 'v1.0.0',
         'flow\D' => 'v1.0.1',
     ],
