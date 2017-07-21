@@ -11,15 +11,15 @@
 namespace Lib;
 
 class Context implements work {
-    private $strategy;
+    public static $strategy;
 
     public function run()
     {
-        $this->strategy->checkFlow();
+        self::$strategy->checkFlow();
     }
 
     public function __construct(strategy $strategy)
     {
-        $this->strategy = $strategy;
+        self::$strategy = $strategy;
     }
 }

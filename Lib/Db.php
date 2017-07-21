@@ -31,11 +31,13 @@ class Db{
         return [];
     }
 
-    public function set($user_id, $history){
+    public function set($user_id, $data){
         $content = $this->getContent();
         foreach($content as $k => $v){
             if($user_id == $v['id']){
-                array_push($content[$k]['history'], $history);
+                foreach ($data  as $dk => $dv){
+                    array_push($content[$k][$dk], $dv);
+                }
             }
         }
         $content = json_encode($content);

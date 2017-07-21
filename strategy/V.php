@@ -16,7 +16,7 @@ class V implements strategy {
 
     public $history = [];
 
-    public $flow = [];
+    public  $flow = [];
 
     public function checkFlow()
     {
@@ -24,10 +24,11 @@ class V implements strategy {
         $history = $this->getHistory();
         echo 'flow:<br/>';
         print_r($flow);
-        echo '<br/>nowa history:';
+        echo '<br/>now history:';
         print_r($history);
         foreach ($flow as $v) {
-            if(in_array($v, $history)){
+            $check = $v . ':' . $v::getVersion();
+            if(in_array($check, $history)){
                 continue;
             } else {
                 (new $v())->run();
@@ -42,8 +43,8 @@ class V implements strategy {
     public function getConf($name)
     {
         $conf = require_once ROOT.DIRECTORY_SEPARATOR.'conf/conf.php';
-        $this->flow = $conf['flow'][$name];
-        return $this->flow;
+        $this->flow = $conf;
+        return $conf['flow'][$name];
     }
 
     public function getHistory()
@@ -51,4 +52,5 @@ class V implements strategy {
         $this->history = (new Db())->get(User::$userId);
         return $this->history['history'];
     }
+
 }
