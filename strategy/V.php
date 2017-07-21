@@ -7,6 +7,7 @@
  */
 namespace strategy;
 
+use Lib\flow;
 use Lib\strategy;
 use Lib\Db;
 use Lib\User;
@@ -31,7 +32,8 @@ class V implements strategy {
             if(in_array($check, $history)){
                 continue;
             } else {
-                (new $v())->run();
+                $ins = new $v();
+                $ins->run();
                 $history = $this->getHistory();
                 echo "<br/>after run flow";
                 print_r($history);

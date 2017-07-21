@@ -25,7 +25,24 @@ return [
         ],
         'strategy\v2' => [
             'flow\D',
-            'flow\C'
+            'flow\C',
+            'case' => [
+                'flow\B' => [
+                    'flow\B',
+                    'flow\A',
+                    'case' => [
+                        'flow\E' => [
+                            'flow\E'
+                        ],
+                        'flow\F' => [
+                            'flow\F'
+                        ]
+                    ]
+                ],
+                'flow\A' => [
+                    'flow\A'
+                ]
+            ]
         ]
     ]
 ];

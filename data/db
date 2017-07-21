@@ -1,1 +1,1 @@
-[{"id":1,"history":[],"strategy_his":[], "finish": 0}]
+[{"id":1,"history":["flow\\B:v1.0.1","flow\\D:v1.0.1","flow\\C:v1.0.0"],"strategy_his":["strategy\\v1:flow\\B:v1.0.1","strategy\\v2:flow\\D:v1.0.1","strategy\\v2:flow\\C:v1.0.0"]}]

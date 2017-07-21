@@ -15,6 +15,6 @@ require_once 'Lib/Loader.php';
 spl_autoload_register('Loader::autoload');
 
 echo '<pre>';
-$context = new \Lib\Context(new \strategy\v1());
+$context = new \Lib\Context(new \strategy\v2());
 $context->run();
 echo '</pre>';
